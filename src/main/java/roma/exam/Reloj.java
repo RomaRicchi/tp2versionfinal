@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package roma.exam;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -12,6 +9,22 @@ public class Reloj {
     private LocalDate dia;
     private String modelo;
     private long numSerie;
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public long getNumSerie() {
+        return numSerie;
+    }
+
+    public void setNumSerie(long numSerie) {
+        this.numSerie = numSerie;
+    }
 
     public Reloj(String hora, String dia, String modelo, long numSerie) {
         this.hora = LocalTime.parse(hora, DateTimeFormatter.ofPattern("HH:mm"));

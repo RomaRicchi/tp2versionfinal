@@ -1,11 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package roma.exam;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 /**
  *
@@ -18,6 +12,22 @@ public class Persona{
     private final double altura;
     private Reloj unReloj;
 
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public Persona(String nombre, String apellidos, int edad, double altura) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.edad = edad;
+        this.altura = altura;
+    }
+
+    
     public Persona(String nombre, String apellidos, int edad, double altura, Reloj unReloj) {
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -56,11 +66,19 @@ public class Persona{
         this.unReloj = reloj;
     }
 
-    public void decirHora(Reloj r) {
+    public void decirHora() {
         if (unReloj != null) {
             System.out.println("La hora actual es: " + unReloj.getHora());
         } else {
             System.out.println("No hay reloj asignado.");
         }
+    }
+
+    public Reloj getUnReloj() {
+        return unReloj;
+    }
+
+    public void setUnReloj(Reloj unReloj) {
+        this.unReloj = unReloj;
     }
 }

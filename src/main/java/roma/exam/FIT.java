@@ -1,9 +1,6 @@
 
 package roma.exam;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
-
 /**
  *
  * @author Tomas
